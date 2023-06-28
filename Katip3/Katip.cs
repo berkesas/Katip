@@ -24,16 +24,7 @@ namespace Katip3
         public String GetInstallationPath()
         {
             #region Locate Dictionary files
-            //Get the deployment directory
-            /*
-            System.Reflection.Assembly assemblyInfo = System.Reflection.Assembly.GetExecutingAssembly();
-
-            //Location is where the assembly is run from 
-            string assemblyLocation = assemblyInfo.Location;
-
-            //CodeBase is the location of the ClickOnce deployment files
-            Uri uriCodeBase = new Uri(assemblyInfo.CodeBase);
-            */
+            //Get the deployment path
             string InstallationLocation = Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData) + @"\Katip";
 
             //dictionaries
@@ -54,15 +45,7 @@ namespace Katip3
         public SpellChecker()
         {
             #region Locate Dictionary files
-            /*//Get the deployment directory
-            System.Reflection.Assembly assemblyInfo = System.Reflection.Assembly.GetExecutingAssembly();
-
-            //Location is where the assembly is run from 
-            string assemblyLocation = assemblyInfo.Location;
-
-            //CodeBase is the location of the ClickOnce deployment files
-            Uri uriCodeBase = new Uri(assemblyInfo.CodeBase);
-            */
+            //Get deployment path
             string InstallationLocation = Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData) + @"\Katip"; 
 
             //dictionaries
@@ -164,16 +147,7 @@ namespace Katip3
             {
                 if(!hunspell.Spell(strWord))
                 {
-                    /*if(strWord.IndexOf("-") > -1)
-                    {
-                        String[] sParts = strWord.Split('-');
-                        if(TurkmenGrammar..Checkstring s1 = strWord.Substring(0, strWord.IndexOf("-"));
-                        string s2 = strWord.Substring(strWord.IndexOf())
-                    }
-                    else
-                    {*/
                         lstMisspellings.Add(strWord);
-                    //}
                 }
             }
 

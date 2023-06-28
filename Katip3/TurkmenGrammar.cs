@@ -350,10 +350,8 @@ namespace Katip3
         public bool CheckOrdinalNumber(String strNumber, String strEnding)
         {
             //int intNumber;
-            //String strLastDigitText;
             String strCorrectNumber = "";
-            //String[] strNumberTextArray;
-
+            
             if (IsNumeric(strNumber) && (String.Compare(strEnding, "njy") == 0 || String.Compare(strEnding, "nji") == 0))
             {
                 strCorrectNumber = AddEndingOrdinal(strNumber, false);
